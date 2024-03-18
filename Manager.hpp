@@ -16,7 +16,7 @@ public:
 		Employee::IntroduceYourself();
 		cout << "Jestem menedzerem firmy. Mam pod soba "<< no_reports<<" podwladnych.\n";
 	}
-	//friend void ChangeSalary(int id, double new_salary, Manager& a);
+	friend void ChangeSalary(int id, double new_salary, Manager& a);
 
 	vector<Employee>employees;
 	vector<Intern>interns;

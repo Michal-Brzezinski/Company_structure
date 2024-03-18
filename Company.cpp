@@ -13,5 +13,10 @@ int main()
 	Employee c = add_employee("Jacek", "Placek",432 ,4000,b);
 	c.IntroduceYourself();
 	b.IntroduceYourself();
-	
+	Intern d = add_intern("Michael", "Mind", 466, 2000, b);
+	Employee e = add_employee("Kot", "wButach", 589, 4200, b);
+	e.IntroduceYourself();
+
+	ChangeSalary(589,4600,b);
+	e.IntroduceYourself();
 }

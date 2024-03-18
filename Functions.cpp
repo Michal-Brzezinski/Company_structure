@@ -15,7 +15,7 @@ Intern add_intern(string fu_name, string fu_surname,int fu_id ,double fu_salary,
 	b.interns.push_back(a);
 	return a;
 }
-/*
+
 Employee& find_Employee(int id, Manager& a)
 {
 	for (int i = 0; i < a.employees.size(); i++)
@@ -38,19 +38,21 @@ Intern& find_Intern(int id, Manager& a)
 void ChangeSalary(int id, double new_salary, Manager& a)
 {
 	Employee d = find_Employee(id, a);
+	Intern e = find_Intern(id, a);
+
 	if (id == d.get_id())
 	{
 		d.c_salary = new_salary;
-		std::cout << "Pomyslnie zmieniono wynagrodzenie pracownika " << d.c_firstName << " " << d.c_lastName;
+		std::cout << "\nPomyslnie zmieniono wynagrodzenie pracownika " << d.c_firstName << " " << d.c_lastName<<"\n\n";
 	}
 	
-	Intern e = find_Intern(id, a);
-	if (id == e.get_id())
+	
+	else if (id == e.get_id())
 	{
 		e.c_salary = new_salary;
-		std::cout << "Pomyslnie zmieniono wynagrodzenie stazysty "<<e.c_firstName<< " "<< e.c_lastName;
+		std::cout << "\nPomyslnie zmieniono wynagrodzenie stazysty "<<e.c_firstName<< " "<< e.c_lastName<<"\n\n";
 	}
 
 
 	else std::cout << "Nie znaleziono podanego zatrudnionego";
-}*/
+}
