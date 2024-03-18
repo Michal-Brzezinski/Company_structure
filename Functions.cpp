@@ -37,20 +37,24 @@ Intern& find_Intern(int id, Manager& a)
 
 void ChangeSalary(int id, double new_salary, Manager& a)
 {
-	Employee d = find_Employee(id, a);
-	Intern e = find_Intern(id, a);
+	Employee* d = &find_Employee(id, a);
+	Intern* e = &find_Intern(id, a);
 
-	if (id == d.get_id())
+	if (id == d->get_id())
 	{
-		d.c_salary = new_salary;
-		std::cout << "\nPomyslnie zmieniono wynagrodzenie pracownika " << d.c_firstName << " " << d.c_lastName<<"\n\n";
+		d->c_salary = new_salary;
+		std::cout << "\nPomyslnie zmieniono wynagrodzenie pracownika " << d->c_firstName << " " << d->c_lastName<<"\n";
+		std::cout << "Zarabia teraz" << d->c_salary<<"\n\n";
+		d->IntroduceYourself();
 	}
 	
 	
-	else if (id == e.get_id())
+	else if (id == e->get_id())
 	{
-		e.c_salary = new_salary;
-		std::cout << "\nPomyslnie zmieniono wynagrodzenie stazysty "<<e.c_firstName<< " "<< e.c_lastName<<"\n\n";
+		e->c_salary = new_salary;
+		std::cout << "\nPomyslnie zmieniono wynagrodzenie stazysty "<<e->c_firstName<< " "<< e->c_lastName<<"\n\n";
+		std::cout << "Zarabia teraz" << e->c_salary << "\n\n";
+		e->IntroduceYourself();
 	}
 
 
